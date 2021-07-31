@@ -29,6 +29,6 @@ document.getElementById('btnSum').onclick = function () {
   } else {
     message.innerHTML = ''
     document.getElementById('printSum').innerHTML =
-      parseInt(numberTens) + parseInt(numberUnits)
+      'Tổng 2 ký số bằng: ' + parseInt(numberTens) + parseInt(numberUnits)
   }
 }
