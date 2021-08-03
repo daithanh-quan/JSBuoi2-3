@@ -12,12 +12,20 @@
  * xuất ra tiền sau quy đổi
  */
 
-var numberMoney = document.getElementById('numberDollar')
-var VNMoney = 23500
-
 document.getElementById('btnChangeMoney').onclick = function () {
-  document.getElementById('printVNĐ').innerHTML =
-    'Số Tiền Đã Được Quy Đổi là : ' +
-    (VNMoney * numberMoney.value).toLocaleString() +
-    'VNĐ'
+  // tạo biến và lấy giá trị
+  var numberMoney = document.getElementById('numberDollar').value
+  var VNMoney = 23500
+  // in giá trị quy đổi
+  var print = document.getElementById('printVNĐ')
+  if (numberMoney > 0) {
+    print.style.color = 'white'
+    print.innerHTML =
+      'Số Tiền Đã Được Quy Đổi là : ' +
+      (VNMoney * numberMoney).toLocaleString() +
+      'VNĐ'
+  } else {
+    print.style.color = 'yellow'
+    print.innerHTML = 'Vui lòng nhập vào số tiền $ bạn muốn quy đổi'
+  }
 }

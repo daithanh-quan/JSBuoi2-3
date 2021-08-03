@@ -16,10 +16,17 @@ function salaryMoney() {
   // tạo biến và gán giá trị
   var numberDate = document.getElementById('numberDate').value
   var salaryDate = 100000
-  document.getElementById('printMoney').innerHTML =
-    'Tổng tiền tháng này là: ' +
-    Math.floor(numberDate * salaryDate).toLocaleString() +
-    'đ'
+  var printMoney = document.getElementById('printMoney')
+  if (numberDate > 0) {
+    printMoney.style.color = 'green'
+    printMoney.innerHTML =
+      'Tổng tiền tháng này là: ' +
+      Math.floor(numberDate * salaryDate).toLocaleString() +
+      'đ'
+  } else {
+    printMoney.style.color = 'yellow'
+    printMoney.innerHTML = 'Vui lòng nhập vào số ngày bạn đã làm'
+  }
 }
 
 document.getElementById('btnPrintMoney').onclick = salaryMoney

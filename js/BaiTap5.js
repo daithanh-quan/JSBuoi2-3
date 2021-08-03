@@ -16,7 +16,7 @@
 
 var valueNumber = document.getElementById('numberSum')
 
-document.getElementById('btnSum').onclick = function () {
+document.getElementById('btnSum').onclick = function (e) {
   // tính số hàng chục và hàng đơn vị
   var numberTens = valueNumber.value / 10
   var numberUnits = valueNumber.value % 10
