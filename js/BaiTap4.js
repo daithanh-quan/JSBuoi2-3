@@ -27,6 +27,9 @@ function checkValue(print, value) {
   } else if (length.value == '') {
     print.style.color = 'yellow'
     print.innerHTML = 'Vui lòng nhập giá trị chiều dài hình chữ nhật'
+  } else if (width.value == 0 || length.value == 0) {
+    print.style.color = 'yellow'
+    print.innerHTML = 'Sẽ không có hình chữ nhật để tính'
   } else {
     print.style.color = 'blue'
     print.innerHTML = 'Diện tích hình chữ nhật bằng : ' + value
