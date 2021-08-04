@@ -24,7 +24,7 @@ document.getElementById('btnSum').onclick = function (e) {
   var message = document.getElementById('message')
   // Điều kiện để tính tổng 2 ký số
   if (valueNumber.value < 10 || valueNumber.value > 99) {
-    message.innerHTML = 'Vui Lòng Nhập 2 Chữ Số'
+    message.innerHTML = 'Vui Lòng Nhập Số Có 2 Chữ Số '
     document.getElementById('printSum').innerHTML = ''
   } else {
     message.innerHTML = ''

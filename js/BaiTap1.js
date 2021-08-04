@@ -17,7 +17,7 @@ function salaryMoney() {
   var numberDate = document.getElementById('numberDate').value
   var salaryDate = 100000
   var printMoney = document.getElementById('printMoney')
-  if (numberDate > 0) {
+  if (numberDate > 0 || numberDate === '0') {
     printMoney.style.color = 'green'
     printMoney.innerHTML =
       'Tổng tiền tháng này là: ' +
@@ -25,7 +25,7 @@ function salaryMoney() {
       'đ'
   } else {
     printMoney.style.color = 'yellow'
-    printMoney.innerHTML = 'Vui lòng nhập vào số ngày bạn đã làm'
+    printMoney.innerHTML = 'Vui lòng nhập vào số ngày bạn đã làm!'
   }
 }
 
